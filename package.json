@@ -1,0 +1,19 @@
+{
+  "name": "datepicker",
+  "version": "2.2.1",
+  "description": "Datepicker Custom Widget for SAP Analytics Cloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkappler/datepicker.git"
+  },
+  "author": "Nikolaj Kappler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkappler/datepicker/issues"
+  },
+  "homepage": "https://github.com/nkappler/datepicker#readme"
+}
