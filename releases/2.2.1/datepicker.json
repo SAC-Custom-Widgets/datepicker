@@ -12,16 +12,14 @@
 		{
 			"kind": "main",
 			"tag": "date-picker",
-			"url": "http://localhost:9000/datepicker/webcomponent.js",
-			"integrity": "sha256-TTp/or4403jf+s2gYla7dFQD411phoH99RKEpuBlO/4=",
-			"ignoreIntegrity": true
+			"url": "https://github.wdf.sap.corp/pages/orca/custom-widget-samples/datepicker/webcomponent.js",
+			"integrity": "sha256-TTp/or4403jf+s2gYla7dFQD411phoH99RKEpuBlO/4="
 		},
 		{
 			"kind": "styling",
 			"tag": "com-sap-sample-datepicker-aps",
-			"url": "http://localhost:9000/datepicker/aps_webcomponent.js",
-			"integrity": "sha256-Kjh3u7fX3DqWW6CrHbkSCLrwc/esxZyxHMLmEe4QPWg=",
-			"ignoreIntegrity": true
+			"url": "https://github.wdf.sap.corp/pages/orca/custom-widget-samples/datepicker/aps_webcomponent.js",
+			"integrity": "sha256-Kjh3u7fX3DqWW6CrHbkSCLrwc/esxZyxHMLmEe4QPWg="
 		}
 	],
 	"properties": {

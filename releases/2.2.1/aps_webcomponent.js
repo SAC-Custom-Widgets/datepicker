@@ -7,10 +7,7 @@
             <option name="aps_format" value="YYYY-MM-dd">YYYY-MM-DD</option>
             <option name="aps_format" value="MM/dd/YYYY">MM/DD/YYYY</option>
             <option name="aps_format" value="dd.MM.YYYY">DD.MM.YYYY</option>
-            <option name="aps_format" value="custom">Custom</option>
         </select>
-        <p id="customP">Custom Date Format</p>
-        <input type="text" id="custom" />
         <p>Theme</p>
         <input type="checkbox" id="theme" /><label for="checkbox">Use dark theme</label>
         <p>Miscellaneous</p>
@@ -22,8 +19,8 @@
             super();
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            ["select", "theme", "range", "custom"].forEach(id =>
-                this._shadowRoot.getElementById(id).addEventListener("change", this[id + "_handler"].bind(this)));
+            ["select", "theme", "range"].forEach(id =>
+                this._shadowRoot.getElementById(id).addEventListener("change", this._submit.bind(this)));
         }
 
         _submit(e) {
@@ -38,30 +35,6 @@
                 }
             }));
             return false;
-        }
-
-        theme_handler(e) {
-            this._submit(e);
-        }
-
-        range_handler(e) {
-            this._submit(e);
-        }
-
-        select_handler(e) {
-            this._submit(e);
-        }
-
-        custom_handler(e) {
-            this.dispatchEvent(new CustomEvent('propertiesChanged', {
-                detail: {
-                    properties: {
-                        format: e.target.value,
-                        darktheme: this.darktheme,
-                        enablerange: this.enablerange
-                    }
-                }
-            }));
         }
 
         get format() {
