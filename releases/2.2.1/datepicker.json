@@ -7,18 +7,18 @@
 	"license": "",
 	"id": "com.sap.sample.datepicker",
 	"version": "2.2.1",
-	"icon": "https://github.wdf.sap.corp/pages/orca/custom-widget-samples/datepicker/calendarBlue.svg",
+	"icon": "http://widgets.nkappler.de/datepicker/releases/2.2.1/calendarBlue.svg",
 	"webcomponents": [
 		{
 			"kind": "main",
 			"tag": "date-picker",
-			"url": "https://github.wdf.sap.corp/pages/orca/custom-widget-samples/datepicker/webcomponent.js",
+			"url": "http://widgets.nkappler.de/datepicker/releases/2.2.1/webcomponent.js",
 			"integrity": "sha256-TTp/or4403jf+s2gYla7dFQD411phoH99RKEpuBlO/4="
 		},
 		{
 			"kind": "styling",
 			"tag": "com-sap-sample-datepicker-aps",
-			"url": "https://github.wdf.sap.corp/pages/orca/custom-widget-samples/datepicker/aps_webcomponent.js",
+			"url": "http://widgets.nkappler.de/datepicker/releases/2.2.1/aps_webcomponent.js",
 			"integrity": "sha256-Kjh3u7fX3DqWW6CrHbkSCLrwc/esxZyxHMLmEe4QPWg="
 		}
 	],
