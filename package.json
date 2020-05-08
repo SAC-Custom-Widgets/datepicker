@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nkappler/datepicker.git"
+    "url": "git+https://github.com/SAC-Custom-Widgets/datepicker.git"
   },
   "author": "Nikolaj Kappler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nkappler/datepicker/issues"
+    "url": "https://github.com/SAC-Custom-Widgets/datepicker/issues"
   },
-  "homepage": "https://github.com/nkappler/datepicker#readme"
+  "homepage": "http://widgets.nkappler.de/datepicker/"
 }
