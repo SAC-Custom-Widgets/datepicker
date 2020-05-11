@@ -9,26 +9,271 @@
     <style>
         * {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            position: relative;
+            font-weight: normal;
         }
 
         .container {
-            max-width: 700px;
+            width: 100%;
+            max-width: 1000px;
             margin: auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .header {
+            background-image: url("./docs/header.png");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            text-shadow: 0 0 5px #fff;
+        }
+
+        .header>div {
+            max-width: 700px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 0;
+        }
+
+        section {
+            margin-top: 25px;
+            padding: 0 12px;
+        }
+
+        section>img {
+            margin-left: 12px;
+        }
+
+        main {
+            max-width: 700px;
+        }
+
+        aside {
+            display: flex;
+            width: 700px;
+            padding: 0 12px;
+            font-size: 14px;
+        }
+
+        aside section:first-of-type {
+            flex-grow: 1;
+            margin-right: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        aside section {
+            width: 200px;
+            min-height: 200px;
+            box-shadow: 0 0 3px inset rgba(0, 0, 0, 0.3);
+        }
+
+        aside img {
+            display: block;
+            margin: 5px auto 0;
+        }
+
+        aside a {
+            color: #0000ff;
+        }
+
+        aside button, aside a {
+            display: block;
+        }
+
+        .download {
+            background-color: #3498db;
+            border-radius: 5px;
+            border: 1px solid #1885ce;
+            text-align: center;
+            width: 176px;
+            color: #fff;
+            padding: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .download:hover {
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .download:active {
+            background-color: #1885ce;
+        }
+
+        .shimmer {
+            width: 30px;
+            height: 100px;
+            position: absolute;
+            transform: rotate(15deg);
+            top: -40px;
+            left: -40px;
+            transition: none;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .download:hover>.shimmer {
+            transition: left 0.5s ease;
+            left: 200px;
+        }
+
+        .buymeacoffee {
+            margin: 10px 0;
+        }
+
+        .scriptingGroup {
+            margin-top: 12px;
+        }
+
+        .scripting {
+            background-color: rgb(242, 247, 255);
+            border: 1px solid rgb(204, 223, 255);
+            margin: 2px 0;
+            padding: 5px;
+        }
+
+        footer {
+            width: 90%;
+            max-width: 676px;
+            border-top: 1px solid #bbb;
+            margin: 40px auto 30px;
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        .scripting>p:first-of-type {
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 16px;
+            color: rgba(0, 119, 200, 0.9);
+        }
+
+        /* Large screens */
+        @media all and (min-width: 920px) {
+
+            aside {
+                flex: 1;
+                order: 2;
+                max-width: 200px;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            aside>section:first-of-type {
+                order: 2;
+                flex-grow: 0;
+            }
+
+            aside>section:last-of-type {
+                order: 1;
+            }
+
+            main {
+                flex: 2;
+                order: 1;
+            }
+
+            .header>div {
+                max-width: 930px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <header class="header">
+        <div>
+            <h1>Datepicker Custom Widget</h1>
+        </div>
+    </header>
     <div class="container">
+        <aside>
+            <section>
+                <a class="download" href="./releases/latest/datepicker.json" target="_blank" download="datepicker.json">
+                    <div class="shimmer"></div>
+                    <h3>Download</h3>
+                    <span></span>
+                </a>
+                All Custom Widgets are free of charge.<br />
+                Donations help me to cover server costs and to buy coffee, fuelling development and maintenance.
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="JC7SHHW9NE45C" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+            </section>
+            <section>
+                <img style="width:130px; height:130px" src="./docs/kappler.png" />
+                <p style="font-size: 14px;">
+                    Nikolaj Kappler<br />
+                    <span style="font-weight:100">B. Sc. Computer Science</span><br />
+                    <a href="mailto:info@nkappler.de">info@nkappler.de</a>
+                </p>
+            </section>
+        </aside>
+        <main>
+            <section style="display: flex">
+                <div>
 
-        <h1>Datepicker Custom Widget</h1>
+                    <h2>Overview</h2>
+                    <p>
+                        The Datepicker Custom Widget provides a sophisticated input field for date values and date
+                        ranges.
+                        The date formatting is customizable and a dark mode is provided.
+                    </p>
+                </div>
+                <img src="./docs/datepicker.png" alt="Datepicker Custom Widget screenshot"
+                    style="box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15); width: 200px" />
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2020 Nikolaj Kappler</p>
+    </footer>
+    <script>
+        (async function loadDetails() {
+            try {
+                let contribution = await (await fetch("./releases/latest/datepicker.json")).json();
+                document.querySelector(".download span").innerHTML = "Version " + contribution.version;
+                const scriptingSection = document.createElement("section");
+                scriptingSection.innerHTML = "<h2>API Documentation</h2>";
+                scriptingSection.id = "scripting";
+                document.querySelector("main").appendChild(scriptingSection);
 
-        <p>This is going to be the detail page for the datepicker custom widget.</p>
-        <ul>
-            <li>Download area</li>
-            <li>Features with live demo maybe?</li>
-        </ul>
-    </div>
+                function generator(property, heading, formatter) {
+                    if (contribution[property] && Object.keys(contribution[property]).length > 0) {
+                        const list = contribution[property];
+                        const div = document.createElement("div");
+                        div.className = "scriptingGroup";
+                        div.innerHTML = "<h3>" + heading + "</h3>";
+                        div.innerHTML += Object.keys(list).map(key => {
+                            const item = list[key];
+                            const header = formatter(key, item);
+                            const description = item.description;
+                            return '<div class="scripting"><p>' + header + "</p><p>" + (description || "no description available") + "</p></div>";
+                        }).join("");
+
+                        document.querySelector("#scripting").appendChild(div);
+                    }
+                }
+
+                const functionformatter = (name, prop) => (
+                    name + "(" +
+                    (prop.parameters || []).map(param => param.name + ": " + param.type).join()
+                    + "): " + (prop.returnType || "void")
+                )
+
+                generator("methods", "Method Summary", functionformatter);
+                generator("events", "Event Summary", functionformatter);
+            } catch (e) { }
+        })();
+    </script>
 </body>
 
 </html>
