@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datepicker Custom Widget</title>
-    <script src="../nkappler.github.io/dist/sidebar/sidebar.js"></script>
+    <!-- <script src="../nkappler.github.io/dist/sidebar/sidebar.js"></script> -->
     <style>
         * {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             box-sizing: border-box;
             position: relative;
             font-weight: normal;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -29,6 +31,7 @@
             background-position: center;
             height: 300px;
             text-shadow: 0 0 5px #fff;
+            display: flex;
         }
 
         .header>div {
@@ -81,7 +84,8 @@
             color: #0000ff;
         }
 
-        aside button, aside a {
+        aside button,
+        aside a {
             display: block;
         }
 
@@ -204,9 +208,11 @@
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick" />
                     <input type="hidden" name="hosted_button_id" value="JC7SHHW9NE45C" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif"
+                        border="0" name="submit" title="PayPal - The safer, easier way to pay online!"
+                        alt="Donate with PayPal button" />
                     <img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" width="1" height="1" />
-                    </form>
+                </form>
             </section>
             <section>
                 <img style="width:130px; height:130px" src="./docs/kappler.png" />
@@ -231,7 +237,7 @@
                 <img src="./docs/datepicker.png" alt="Datepicker Custom Widget screenshot"
                     style="box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15); width: 200px" />
             </section>
-        </div>
+    </div>
     </main>
     <footer>
         <p>&copy; 2020 Nikolaj Kappler</p>
