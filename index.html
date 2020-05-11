@@ -57,6 +57,7 @@
         aside {
             display: flex;
             width: 700px;
+            max-width: 100%;
             padding: 0 12px;
             font-size: 14px;
         }
@@ -70,6 +71,7 @@
         }
 
         aside section {
+            max-width: 50%;
             width: 200px;
             min-height: 200px;
             box-shadow: 0 0 3px inset rgba(0, 0, 0, 0.3);
@@ -99,6 +101,7 @@
             border: 1px solid #1885ce;
             text-align: center;
             width: 176px;
+            max-width: 100%;
             color: #fff;
             padding: 5px;
             margin: 10px 0;
@@ -170,6 +173,10 @@
                 max-width: 200px;
                 flex-direction: column;
                 padding: 0;
+            }
+
+            aside section {
+                max-width: 100%;
             }
 
             aside>section:first-of-type {
