@@ -39,6 +39,7 @@
             width: 100%;
             margin: auto;
             margin-bottom: 0;
+            padding: 12px;
         }
 
         section {
@@ -71,7 +72,6 @@
         }
 
         aside section {
-            max-width: 50%;
             width: 200px;
             min-height: 200px;
             box-shadow: 0 0 3px inset rgba(0, 0, 0, 0.3);
@@ -80,6 +80,8 @@
         aside img {
             display: block;
             margin: 5px auto 0;
+            max-width: 100%;
+            width: 130px;
         }
 
         aside a {
@@ -164,6 +166,23 @@
             color: rgba(0, 119, 200, 0.9);
         }
 
+
+        /* Tiny screens */
+        @media all and (max-width: 420px) {
+
+            aside section {
+                max-width: 50%;
+            }
+
+            .header {
+                height: 200px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+
         /* Large screens */
         @media all and (min-width: 920px) {
 
@@ -173,10 +192,6 @@
                 max-width: 200px;
                 flex-direction: column;
                 padding: 0;
-            }
-
-            aside section {
-                max-width: 100%;
             }
 
             aside>section:first-of-type {
@@ -226,7 +241,7 @@
                 </form>
             </section>
             <section>
-                <img style="width:130px; height:130px" src="./docs/kappler.png" />
+                <img src="./docs/kappler.png" />
                 <p style="font-size: 14px;">
                     Nikolaj Kappler<br />
                     <span style="font-weight:100">B. Sc. Computer Science</span><br />
