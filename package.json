@@ -1,6 +1,6 @@
 {
   "name": "datepicker",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Datepicker Custom Widget for SAP Analytics Cloud",
   "main": "index.js",
   "scripts": {

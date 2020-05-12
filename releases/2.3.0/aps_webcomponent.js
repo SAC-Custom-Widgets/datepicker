@@ -1,4 +1,5 @@
 (function () {
+    let version = "2.3.0";
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <p>Date Format</p>
@@ -17,10 +18,33 @@
     class DatePickerAps extends HTMLElement {
         constructor() {
             super();
+            this._checkForUpdates();
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             ["select", "theme", "range"].forEach(id =>
                 this._shadowRoot.getElementById(id).addEventListener("change", this._submit.bind(this)));
+        }
+
+        async _checkForUpdates() {
+            try {
+                const contribution = await (await fetch("http://widgets.nkappler.de/datepicker/releases/latest/datepicker.json")).json();
+                if (contribution.version > version) {
+                    const updateInfo = document.createElement("div");
+                    updateInfo.innerHTML = `
+                        <p style="
+                        background-color: #e78c0744;
+                        border: 1px solid #e78c07;
+                        white-space: normal;
+                        padding: 5px;
+                        width: 100%;
+                        box-sizing: border-box;">
+                            A newer version of this Custom Widget is available.
+                            Please contact your system administrator
+                        </p>
+                    `;
+                    this._shadowRoot.prepend(updateInfo);
+                }
+            } catch (error) { }
         }
 
         _submit(e) {
@@ -62,5 +86,5 @@
         }
     }
 
-    customElements.define('com-sap-sample-datepicker-aps', DatePickerAps);
+    customElements.define('nkappler-datepicker-aps', DatePickerAps);
 })();

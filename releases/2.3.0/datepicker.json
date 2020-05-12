@@ -3,23 +3,23 @@
 	"description": "Date Picker Custom Widget",
 	"newInstancePrefix": "DatePicker",
 	"eula": "",
-	"vendor": "SAP",
+	"vendor": "Nikolaj Kappler",
 	"license": "",
-	"id": "com.sap.sample.datepicker",
-	"version": "2.2.1",
-	"icon": "http://widgets.nkappler.de/datepicker/releases/2.2.1/calendarBlue.svg",
+	"id": "nkappler.datepicker",
+	"version": "2.3.0",
+	"icon": "http://widgets.nkappler.de/datepicker/docs/calendarBlue.svg",
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "date-picker",
-			"url": "http://widgets.nkappler.de/datepicker/releases/2.2.1/webcomponent.js",
-			"integrity": "sha256-TTp/or4403jf+s2gYla7dFQD411phoH99RKEpuBlO/4="
+			"tag": "nkappler-date-picker",
+			"url": "http://widgets.nkappler.de/datepicker/releases/2.3.0/webcomponent.js",
+			"integrity": "sha256-dCBHswMo56lQlaUzxv+s1QFzkfOWE0VD3AaXxXZ6ysQ="
 		},
 		{
 			"kind": "styling",
-			"tag": "com-sap-sample-datepicker-aps",
-			"url": "http://widgets.nkappler.de/datepicker/releases/2.2.1/aps_webcomponent.js",
-			"integrity": "sha256-Kjh3u7fX3DqWW6CrHbkSCLrwc/esxZyxHMLmEe4QPWg="
+			"tag": "nkappler-datepicker-aps",
+			"url": "http://widgets.nkappler.de/datepicker/releases/2.3.0/aps_webcomponent.js",
+			"integrity": "sha256-jAP5zqXYMhXOf5YfTnRZrZUPIcOYNEbjHHf8mxlUZEk="
 		}
 	],
 	"properties": {
@@ -97,7 +97,7 @@
 	},
 	"events": {
 		"onChange": {
-			"description": "Called when the user changes the selected Date."
+			"description": "Called when the user changes the selected date."
 		}
 	}
 }
