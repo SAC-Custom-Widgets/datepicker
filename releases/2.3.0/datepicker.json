@@ -1,7 +1,7 @@
 {
-	"name": "Date Picker",
-	"description": "Date Picker Custom Widget",
-	"newInstancePrefix": "DatePicker",
+	"name": "Datepicker",
+	"description": "The Datepicker Custom Widget provides a sophisticated input field for date values and date ranges. The date formatting is customizable and a dark mode is provided.",
+	"newInstancePrefix": "Datepicker",
 	"eula": "",
 	"vendor": "Nikolaj Kappler",
 	"license": "",
@@ -13,13 +13,13 @@
 			"kind": "main",
 			"tag": "nkappler-date-picker",
 			"url": "http://widgets.nkappler.de/datepicker/releases/2.3.0/webcomponent.js",
-			"integrity": "sha256-dCBHswMo56lQlaUzxv+s1QFzkfOWE0VD3AaXxXZ6ysQ="
+			"integrity": "sha256-89xC0WS6CXYG4SkLrP06XrbaeDGhIHJhMtB4R7MrhNA="
 		},
 		{
 			"kind": "styling",
 			"tag": "nkappler-datepicker-aps",
 			"url": "http://widgets.nkappler.de/datepicker/releases/2.3.0/aps_webcomponent.js",
-			"integrity": "sha256-jAP5zqXYMhXOf5YfTnRZrZUPIcOYNEbjHHf8mxlUZEk="
+			"integrity": "sha256-wkOVPNMg8Y0Qeqk384BZpNAshQZpkdr0GF4MFkrvMgY="
 		}
 	],
 	"properties": {
