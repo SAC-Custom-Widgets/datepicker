@@ -1,11 +1,22 @@
 (function () {
+    let version = "2.3.1";
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `<link rel="stylesheet" type="text/css" href="https://github.wdf.sap.corp/pages/orca/custom-widget-samples/datepicker/light.css"/>`;
+    tmpl.innerHTML = `<link rel="stylesheet" type="text/css" href="https://widgets.nkappler.de/datepicker/releases/2.3.1/light.css"/>`;
 
     class DatePicker extends HTMLElement {
         constructor() {
             super();
             this.init();
+            this.checkForUpdates();
+        }
+        
+        async checkForUpdates() {
+            try {
+                const contribution = await (await fetch("https://widgets.nkappler.de/datepicker/releases/latest/datepicker.json")).json();
+                if (contribution.version > version) {
+                    console.log("A newer version of the Datepicker Custom Widget is available. Please contact your system administrator");
+                }
+            } catch (error) { }
         }
 
         init() {
@@ -52,7 +63,7 @@
         }
 
         set darktheme(value) {
-            this.querySelector("link").setAttribute("href", "https://github.wdf.sap.corp/pages/orca/custom-widget-samples/datepicker/" +
+            this.querySelector("link").setAttribute("href", "https://widgets.nkappler.de/datepicker/releases/2.3.1/" +
                 (value ? "dark.css" : "light.css")
             );
         }
@@ -65,5 +76,5 @@
         }
     }
 
-    customElements.define('date-picker', DatePicker);
+    customElements.define('nkappler-date-picker', DatePicker);
 })();

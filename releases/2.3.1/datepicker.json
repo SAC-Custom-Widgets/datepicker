@@ -1,25 +1,25 @@
 {
-	"name": "Date Picker",
-	"description": "Date Picker Custom Widget",
-	"newInstancePrefix": "DatePicker",
+	"name": "Datepicker",
+	"description": "The Datepicker Custom Widget provides a sophisticated input field for date values and date ranges. The date formatting is customizable and a dark mode is provided.",
+	"newInstancePrefix": "Datepicker",
 	"eula": "",
-	"vendor": "SAP",
+	"vendor": "Nikolaj Kappler",
 	"license": "",
-	"id": "com.sap.sample.datepicker",
-	"version": "2.2.1",
-	"icon": "http://widgets.nkappler.de/datepicker/releases/2.2.1/calendarBlue.svg",
+	"id": "nkappler.datepicker",
+	"version": "2.3.1",
+	"icon": "https://widgets.nkappler.de/datepicker/docs/calendarBlue.svg",
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "date-picker",
-			"url": "http://widgets.nkappler.de/datepicker/releases/2.2.1/webcomponent.js",
-			"integrity": "sha256-TTp/or4403jf+s2gYla7dFQD411phoH99RKEpuBlO/4="
+			"tag": "nkappler-date-picker",
+			"url": "https://widgets.nkappler.de/datepicker/releases/2.3.1/webcomponent.js",
+			"integrity": "sha256-2CjuSVz5IWqED4y3d193gE/kKptJ1S0KeaR5/dwa9fc="
 		},
 		{
 			"kind": "styling",
-			"tag": "com-sap-sample-datepicker-aps",
-			"url": "http://widgets.nkappler.de/datepicker/releases/2.2.1/aps_webcomponent.js",
-			"integrity": "sha256-Kjh3u7fX3DqWW6CrHbkSCLrwc/esxZyxHMLmEe4QPWg="
+			"tag": "nkappler-datepicker-aps",
+			"url": "https://widgets.nkappler.de/datepicker/releases/2.3.1/aps_webcomponent.js",
+			"integrity": "sha256-MOj5GFMDXAkyWYA/sfjzrIa1HTMTSBapRpZUs68is/g="
 		}
 	],
 	"properties": {
@@ -97,7 +97,7 @@
 	},
 	"events": {
 		"onChange": {
-			"description": "Called when the user changes the selected Date."
+			"description": "Called when the user changes the selected date."
 		}
 	}
 }

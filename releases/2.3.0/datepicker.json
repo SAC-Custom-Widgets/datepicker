@@ -1,0 +1,103 @@
+{
+	"name": "Datepicker",
+	"description": "The Datepicker Custom Widget provides a sophisticated input field for date values and date ranges. The date formatting is customizable and a dark mode is provided.",
+	"newInstancePrefix": "Datepicker",
+	"eula": "",
+	"vendor": "Nikolaj Kappler",
+	"license": "",
+	"id": "nkappler.datepicker",
+	"version": "2.3.0",
+	"icon": "http://widgets.nkappler.de/datepicker/docs/calendarBlue.svg",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "nkappler-date-picker",
+			"url": "http://widgets.nkappler.de/datepicker/releases/2.3.0/webcomponent.js",
+			"integrity": "sha256-89xC0WS6CXYG4SkLrP06XrbaeDGhIHJhMtB4R7MrhNA="
+		},
+		{
+			"kind": "styling",
+			"tag": "nkappler-datepicker-aps",
+			"url": "http://widgets.nkappler.de/datepicker/releases/2.3.0/aps_webcomponent.js",
+			"integrity": "sha256-wkOVPNMg8Y0Qeqk384BZpNAshQZpkdr0GF4MFkrvMgY="
+		}
+	],
+	"properties": {
+		"dateVal": {
+			"type": "Date",
+			"description": "default date"
+		},
+		"secondDateVal": {
+			"type": "Date",
+			"description": "default date"
+		},
+		"format": {
+			"type": "string",
+			"description": "date format",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 200
+		},
+		"height": {
+			"type": "integer",
+			"default": 48
+		},
+		"darktheme": {
+			"type": "boolean",
+			"default": false
+		},
+		"enablerange": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"methods": {
+		"getDateVal": {
+			"returnType": "Date",
+			"description": "get the date. (start date if range selection is enabled)",
+			"parameters": [],
+			"body": "return this.dateVal;"
+		},
+		"setDateVal": {
+			"description": "set the date. (start date if range selection is enabled)",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new date"
+				}
+			],
+			"body": "this.dateVal = dv;"
+		},
+		"getSecondDateVal": {
+			"returnType": "Date",
+			"description": "get the end date. (returns undefined if range selection is not enabled)",
+			"parameters": [],
+			"body": " var x = new Date(); x = undefined; if (this.enablerange) { return this.secondDateVal; } else { return x; }"
+		},
+		"setSecondDateVal": {
+			"description": "set the end date. (has no effect if range selection is not enabled)",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new date"
+				}
+			],
+			"body": "this.secondDateVal = dv;"
+		},
+		"isRangeEnabled": {
+			"description": "Returns whether range selection is enabled",
+			"parameters": [],
+			"body": "return this.enablerange;",
+			"returnType": "boolean"
+		}
+	},
+	"events": {
+		"onChange": {
+			"description": "Called when the user changes the selected date."
+		}
+	}
+}
