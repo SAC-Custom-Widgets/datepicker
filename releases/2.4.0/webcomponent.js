@@ -98,15 +98,25 @@
         }
 
         updateMaxDate() {
-            if (!!this._maxDate && this.DP.getDateValue() > this._maxDate) {
-                this.DP.setDateValue(this._maxDate);
+            if (!!this._maxDate) {
+                if (this.DP.getDateValue() > this._maxDate) {
+                    this.DP.setDateValue(this._maxDate);
+                }
+                if (this._enablerange && this.DP.getSecondDateValue() > this._maxDate) {
+                    this.DP.setSecondDateValue(this._maxDate);
+                }
             }
             this.DP.setMaxDate(this._maxDate);
         }
 
         updateMinDate() {
-            if (!!this._maxDate && this.DP.getDateValue() < this._minDate) {
-                this.DP.setDateValue(this._minDate);
+            if (!!this._maxDate) {
+                if (this.DP.getDateValue() < this._minDate) {
+                    this.DP.setDateValue(this._minDate);
+                }
+                if (this._enablerange && this.DP.getSecondDateValue() < this._minDate) {
+                    this.DP.setSecondDateValue(this._minDate);
+                }
             }
             this.DP.setMinDate(this._minDate);
         }
