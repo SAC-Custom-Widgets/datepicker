@@ -13,19 +13,16 @@
 			"kind": "main",
 			"tag": "nkappler-date-picker",
 			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.0/webcomponent.js",
-			"integrity": "sha256-9MgyPpg9G9x7XaLdnAZ3C+WRz4cx4TsGU8zqHG8c5Do="
+			"integrity": "sha256-UXD/9do5liJUpGC4N9qN4KbD8tPC1V8ur44y00G5Pew="
 		},
 		{
 			"kind": "styling",
 			"tag": "nkappler-datepicker-aps",
 			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.0/aps_webcomponent.js",
-			"integrity": "sha256-6MYNO1naW//DpyKcy3bFp2P6AVhATfZAhe+t4cxWzaU="
+			"integrity": "sha256-0VF1kRk7NneG9EcysIcr4qjSOXYdKtEPBxJ9e+20iMM="
 		}
 	],
 	"properties": {
-		"clear": {
-			"description": "unset the selected date value"
-		},
 		"dateVal": {
 			"type": "Date",
 			"description": "default (start) date"
@@ -41,11 +38,11 @@
 		},
 		"width": {
 			"type": "integer",
-			"default": 200
+			"default": 192
 		},
 		"height": {
 			"type": "integer",
-			"default": 48
+			"default": 32
 		},
 		"darktheme": {
 			"type": "boolean",
@@ -65,6 +62,9 @@
 		}
 	},
 	"methods": {
+		"clear": {
+			"description": "unset the selected date value"
+		},
 		"getDateVal": {
 			"returnType": "Date",
 			"description": "get the date. (start date if range selection is enabled)",
