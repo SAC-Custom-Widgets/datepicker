@@ -13,13 +13,13 @@
 			"kind": "main",
 			"tag": "nkappler-date-picker",
 			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/webcomponent.js",
-			"integrity": "sha256-UXD/9do5liJUpGC4N9qN4KbD8tPC1V8ur44y00G5Pew="
+			"integrity": "sha256-jJpzt24iMUjSBPE/JBgZQKCVnL63eemKZ55akPEwweI="
 		},
 		{
 			"kind": "styling",
 			"tag": "nkappler-datepicker-aps",
 			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/aps_webcomponent.js",
-			"integrity": "sha256-0VF1kRk7NneG9EcysIcr4qjSOXYdKtEPBxJ9e+20iMM="
+			"integrity": "sha256-aKf5wGDj7feNa6NDPHoiQZ+gnlHmt3hZ9Zn1yynrGGI="
 		}
 	],
 	"properties": {

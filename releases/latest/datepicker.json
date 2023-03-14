@@ -6,20 +6,20 @@
 	"vendor": "Nikolaj Kappler",
 	"license": "",
 	"id": "nkappler.datepicker",
-	"version": "2.5.0",
+	"version": "2.5.1",
 	"icon": "https://widgets.nkappler.de/datepicker/docs/calendarBlue.svg",
 	"webcomponents": [
 		{
 			"kind": "main",
 			"tag": "nkappler-date-picker",
-			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.0/webcomponent.js",
-			"integrity": "sha256-UXD/9do5liJUpGC4N9qN4KbD8tPC1V8ur44y00G5Pew="
+			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/webcomponent.js",
+			"integrity": "sha256-jJpzt24iMUjSBPE/JBgZQKCVnL63eemKZ55akPEwweI="
 		},
 		{
 			"kind": "styling",
 			"tag": "nkappler-datepicker-aps",
-			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.0/aps_webcomponent.js",
-			"integrity": "sha256-0VF1kRk7NneG9EcysIcr4qjSOXYdKtEPBxJ9e+20iMM="
+			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/aps_webcomponent.js",
+			"integrity": "sha256-aKf5wGDj7feNa6NDPHoiQZ+gnlHmt3hZ9Zn1yynrGGI="
 		}
 	],
 	"properties": {
@@ -67,9 +67,8 @@
 		},
 		"getDateVal": {
 			"returnType": "Date",
-			"description": "get the date. (start date if range selection is enabled)",
-			"parameters": [],
-			"body": "return this.dateVal;"
+			"description": "get the date. (start date if range selection is enabled, returns undefined when no date is selecteds)",
+			"parameters": []
 		},
 		"setDateVal": {
 			"description": "set the date. (start date if range selection is enabled)",
