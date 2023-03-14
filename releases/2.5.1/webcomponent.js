@@ -56,7 +56,6 @@
 
         clear() {
             this.DP.setValue("");
-            this.dispatchEvent(new Event("onChange"));
         }
 
         getDateVal() {
