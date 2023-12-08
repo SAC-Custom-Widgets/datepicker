@@ -6,20 +6,20 @@
 	"vendor": "Nikolaj Kappler",
 	"license": "",
 	"id": "nkappler.datepicker",
-	"version": "2.5.1",
+	"version": "2.5.2",
 	"icon": "https://widgets.nkappler.de/datepicker/docs/calendarBlue.svg",
 	"webcomponents": [
 		{
 			"kind": "main",
 			"tag": "nkappler-date-picker",
-			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/webcomponent.js",
-			"integrity": "sha256-jJpzt24iMUjSBPE/JBgZQKCVnL63eemKZ55akPEwweI="
+			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.2/webcomponent.js",
+			"integrity": "sha256-8jqUjaVpxPfY5hSd/lecwlXzpI4B8NZuXa5umRi08uE="
 		},
 		{
 			"kind": "styling",
 			"tag": "nkappler-datepicker-aps",
-			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.1/aps_webcomponent.js",
-			"integrity": "sha256-aKf5wGDj7feNa6NDPHoiQZ+gnlHmt3hZ9Zn1yynrGGI="
+			"url": "https://widgets.nkappler.de/datepicker/releases/2.5.2/aps_webcomponent.js",
+			"integrity": "sha256-vPO3b1+qfZ7G3/ddHj/dqZrpHQ32+a+YYL5eTxaRcc0="
 		}
 	],
 	"properties": {
