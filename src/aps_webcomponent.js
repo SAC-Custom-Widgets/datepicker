@@ -1,5 +1,5 @@
 (function () {
-    let version = "2.6.pre";
+    let version = "0.2.6";
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style>

@@ -6,7 +6,7 @@
 	"vendor": "Nikolaj Kappler",
 	"license": "",
 	"id": "nkappler.datepicker",
-	"version": "2.6.pre",
+	"version": "0.2.6",
 	"icon": "https://widgets.nkappler.de/datepicker/docs/calendarBlue.svg",
 	"webcomponents": [
 		{
